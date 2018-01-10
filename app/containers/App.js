@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import MainSection from '../components/MainSection';
 import * as TodoActions from '../actions/todos';
 import style from './App.css';
+import ProductSearch from '../components/ProductSearch';
 
 @connect(
   state => ({
@@ -22,12 +23,11 @@ export default class App extends Component {
   };
 
   render() {
-    const { todos, actions } = this.props;
+    const { } = this.props;
 
     return (
       <div className={style.normal}>
-        <Header addTodo={actions.addTodo} />
-        <MainSection todos={todos} actions={actions} />
+        <ProductSearch/>
       </div>
     );
   }

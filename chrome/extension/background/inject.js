@@ -23,6 +23,7 @@ function loadScript(name, tabId, cb) {
       request.onload = () => {
         if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
           chrome.tabs.executeScript(tabId, { code: request.responseText, runAt: 'document_start' });
+
         }
       };
       chrome.tabs.executeScript(tabId, { code: fetchRes, runAt: 'document_end' }, cb);
